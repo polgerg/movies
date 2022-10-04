@@ -1,0 +1,23 @@
+
+<div class="movie-list-main-container">
+    <div *ngFor="let movie of movies?.results" class="movie-list-item" (click)="showMovieDetails(movie)">
+        <div>
+            <div>
+                <img [src]="movie.poster_path
+                ? 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ movie.poster_path
+                : '../../../../../assets/images/not-found.png'"
+                    alt="film poster"
+                    style="width: 300px; height: 450px">
+            </div>
+            <h2>{{movie.title}}</h2>
+        </div>
+        <div>
+            <h3>{{movie.release_date}}</h3>
+            <h3>
+                <span *ngFor="let genre of movie.genres; let i = index">
+                    {{ i < movie.genres!.length - 1 ? genre + ',' : genre }}
+                </span>
+            </h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-search-panel (inputEmitter)="getFilteredMovies($event)"></app-search-panel>
+<app-filtered-movie-list *ngIf="movies" [movies]="movies"></app-filtered-movie-list>
+<h1 style="text-align: center; margin-top: 80px;" *ngIf="isFirstInit">Please enter some characters!</h1>
+<h1 style="text-align: center; margin-top: 80px;" *ngIf="isNoResult">There is no result!</h1>
+
+<app-movie-details-modal *ngIf="isMovieSelected"></app-movie-details-modal>

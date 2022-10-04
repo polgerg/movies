@@ -1,0 +1,10 @@
+<div class="movie-details-modal-container" (click)="deselectMovie()">
+    <div>
+        <img [src]="(movieService.selectedMovie | async)?.poster_path
+        ? 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ (movieService.selectedMovie | async)?.poster_path
+        : '../../../../../assets/images/not-found.png'"
+        alt="film poster"
+        style="width: 300px; height: 450px">
+    </div>
+    <h1>{{(movieService.selectedMovie | async)?.title}}</h1>
+</div>

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables';
+@import './assets/styles/fonts';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-color: $backgroundColor;
+}
+
+label {
+    color: $baseTextColor;
+    font-size: 1.5rem;
+    font-family: $source;
+    background-color: $backgroundColor;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+h1 {
+    color: $baseTextColor;
+    font-size: 4rem;
+    font-family: $bebas;  
+}
+
+h2 {
+    color: $baseTextColor;
+    font-family: $source;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: $baseTextColor;
+    font-family: $source;
+    font-size: 1rem;
+}
+
+p {
+    font-family: $source;
+}
