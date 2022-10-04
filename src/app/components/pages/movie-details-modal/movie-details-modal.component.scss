@@ -6,6 +6,41 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 1000px;
-    height: 700px;
+    height: 510px;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.poster-div {
+    margin-left: 30px;
+}
+
+.movie-details-div {
+    margin-right: 30px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.movie-title-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.movie-disc-div {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-overview-div {
+    margin-top: 30px;
+}
+
+.movie-overview-div h2 {
+    margin-bottom: 20px;
 }

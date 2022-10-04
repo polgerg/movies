@@ -1,10 +1,23 @@
 <div class="movie-details-modal-container" (click)="deselectMovie()">
-    <div>
+    <div class="poster-div">
         <img [src]="(movieService.selectedMovie | async)?.poster_path
         ? 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'+ (movieService.selectedMovie | async)?.poster_path
         : '../../../../../assets/images/not-found.png'"
         alt="film poster"
         style="width: 300px; height: 450px">
     </div>
-    <h1>{{(movieService.selectedMovie | async)?.title}}</h1>
+    <div class="movie-details-div">
+        <div class="movie-title-div">
+            <h1>{{(movieService.selectedMovie | async)?.title}}</h1>
+            <h3 style="margin-bottom: 18px;">{{(movieService.selectedMovie | async)?.vote_average}}⭐</h3>
+        </div>
+        <div class="movie-disc-div">
+            <p>Release Date: {{(movieService.selectedMovie | async)?.release_date}}</p>
+            <p>Language: {{(movieService.selectedMovie | async)?.original_language}}</p>
+        </div>
+        <div class="movie-overview-div">
+            <h2>Overview</h2>
+            <p>{{(movieService.selectedMovie | async)?.overview}}</p>
+        </div>
+    </div>
 </div>
